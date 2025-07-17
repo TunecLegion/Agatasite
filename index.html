@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ясновидящая Агата — Магические услуги и ритуалы</title>
+    <meta name="description" content="Ясновидящая Агата: черная, красная и белая магия, работа с духами, гадания, ритуалы на любовь, защиту, богатство. Конфиденциально и эффективно.">
+    <meta name="keywords" content="магия, гадание, ясновидящая, обряды, ритуалы, защита, любовь, деньги">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            ж
+        }
+
+        html, body {
+            height: 100%;
+            font-family: "Calibri", sans-serif;
+            background-color: #000;
+            color: #fcd772;
+            scroll-behavior: smooth;
+        }
+
+        .video-background, .video-background-mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -10;
+        }
+
+        .video-background-mobile {
+            display: none;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            z-index: 1;
+            animation: fadeIn 2s ease-out;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .header-video, .header-video-mobile {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .header-video-mobile {
+            display: none;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 7rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg,#fff4c2,#ff0000,#b8860b,#ff0000,#fff4c2);
+            background-size: 400%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: shine 5s linear infinite;
+        }
+
+        p {
+            font-size: 1.8rem;
+            max-width: 600px;
+            color: #fcd772;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .cta-button {
+            margin-top: 2.2rem;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(45deg,#ff0000,#b8860b);
+            color: black;
+            border: none;
+            font-weight: bold;
+            font-size: 1.9rem;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ff0000;
+            transition: transform .3s;
+        }
+
+            .cta-button:hover {
+                transform: scale(1.05);
+            }
+
+        section {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.85);
+            border-top: 1px solid #ff0000;
+            border-bottom: 1px solid #ff0000;
+            animation: fadeIn 2s ease-out;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+            section h2 {
+                font-size: 3.6rem;
+                margin-bottom: 1rem;
+                background: linear-gradient(90deg, #fff4c2, #ff0000, #b8860b, #ff0000, #fff4c2);
+                background-size: 400%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                animation: shine 6s linear infinite;
+                position: relative;
+            }
+
+                section h2::after {
+                    content: '';
+                    display: block;
+                    width: 60px;
+                    height: 3px;
+                    background: #ff0000;
+                    margin: 10px auto;
+                }
+
+            section p {
+                max-width: 700px;
+                margin: auto;
+                font-size: 1.68rem;
+            }
+
+        .services-list, .methods-list {
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: left;
+        }
+
+            .services-list li, .methods-list li {
+                font-size: 1.68rem;
+                margin-bottom: 1rem;
+                list-style: none;
+                position: relative;
+                padding-left: 2rem;
+            }
+
+                .services-list li::before, .methods-list li::before {
+                    content: '✨';
+                    position: absolute;
+                    left: 0;
+                    color: #ff0000;
+                }
+
+        .faq-item {
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+
+        .faq-question {
+            background: #111;
+            padding: 1rem;
+            cursor: pointer;
+            border: 1px solid #ff0000;
+            font-size: 1.2rem;
+        }
+
+        .faq-answer {
+            display: none;
+            background: #222;
+            padding: 1rem;
+            border: 1px solid #ff0000;
+            border-top: none;
+            font-size: 1.08rem;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: .8rem;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            background: #111;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 1rem;
+            background: linear-gradient(45deg,#ff0000,#b8860b);
+            border: none;
+            color: #000;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #tarot-result, #ritual-calendar {
+            margin: 1rem auto;
+            font-size: 1.5rem;
+            color: #fcd772;
+        }
+
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            padding: 1rem;
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            padding: 2rem;
+            background: #111;
+            text-align: center;
+            font-size: 1rem;
+            color: #ccc;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .gold-gradient {
+            font-size: 2.2rem;
+            max-width: 700px;
+            background: linear-gradient(90deg, #fff4c2, #ffcc00, #b8860b, #ffcc00, #fff4c2);
+            background-size: 400%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: goldShine 5s linear infinite;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px #25D366;
+            cursor: pointer;
+            z-index: 9999;
+            transition: transform 0.3s;
+        }
+
+            .whatsapp-button:hover {
+                transform: scale(1.1);
+            }
+
+            .whatsapp-button img {
+                width: 32px;
+                height: 32px;
+            }
+
+        .instagram-button {
+            position: fixed;
+            bottom: 40px;
+            left: 110px;
+            width: 60px;
+            height: 60px;
+            background: #E1306C;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px #E1306C;
+            cursor: pointer;
+            z-index: 9999;
+            transition: transform 0.3s;
+        }
+
+            .instagram-button:hover {
+                transform: scale(1.1);
+            }
+
+            .instagram-button img {
+                width: 32px;
+                height: 32px;
+            }
+
+        .whatsapp-popup {
+            display: none;
+            position: fixed;
+            bottom: 110px;
+            left: 40px;
+            background: #111;
+            border: 2px solid #25D366;
+            border-radius: 12px;
+            padding: 1rem;
+            z-index: 9999;
+            color: #fff;
+            box-shadow: 0 0 20px #25D366;
+            animation: fadeInUp 0.3s ease-out;
+            width: 240px;
+        }
+
+            .whatsapp-popup h3 {
+                margin-bottom: 0.5rem;
+                font-size: 1.1rem;
+                color: #fcd772;
+            }
+
+            .whatsapp-popup button {
+                width: 100%;
+                padding: 0.6rem;
+                margin: 0.3rem 0;
+                background: #25D366;
+                border: none;
+                color: #000;
+                font-weight: bold;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1rem;
+            }
+
+            .whatsapp-popup .close-btn {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                color: #fff;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes goldShine {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media(max-width: 768px) {
+            .faq-question {
+                font-size: 1rem;
+            }
+
+            .faq-answer {
+                font-size: 0.95rem;
+            }
+
+            header, section, footer {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .video-background {
+                display: none;
+            }
+
+            .video-background-mobile {
+                display: block;
+            }
+
+            .header-video {
+                display: none;
+            }
+
+            .header-video-mobile {
+                display: block;
+            }
+
+            h1 {
+                font-size: 3.0rem;
+            }
+
+            .gold-gradient {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+
+            section h2 {
+                font-size: 2.2rem;
+            }
+
+            section p, .services-list li, .methods-list li {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Видео-фон -->
+    <video autoplay muted loop class="video-background"><source src="https://cdn.pixabay.com/video/2024/11/09/240499_large.mp4" type="video/mp4"></video>
+    <video autoplay muted loop class="video-background-mobile"><source src="https://cdn.pixabay.com/video/2022/05/29/118537-715426749_large.mp4" type="video/mp4"></video>
+
+    <!-- HEADER -->
+    <header>
+        <video autoplay muted loop class="header-video"><source src="https://cdn.pixabay.com/video/2025/06/29/288522.mp4" type="video/mp4"></video>
+        <video autoplay muted loop class="header-video-mobile"><source src="https://cdn.pixabay.com/video/2025/06/29/288482_large.mp4" type="video/mp4"></video>
+        <div class="header-overlay"></div>
+        <h1>Ясновидящая Агата</h1>
+        <p class="gold-gradient">Колдунья, Маг, Гадалка, Эзотерик и Ясновидящая — ваш проводник в мир мистики и ритуалов.</p>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </header>
+
+    <!-- О ЯСНОВИДЯЩЕЙ -->
+    <section id="about">
+        <h2>Ясновидящая Агата</h2>
+
+        <img src="https://i.pinimg.com/736x/db/f6/68/dbf668c212d47b12f62d3c96dabdca3f.jpg"
+             alt="Ясновидящая Агата"
+             style="max-width: 100%; border-radius: 10px; box-shadow: 0 0 20px gold; margin: 20px auto; display: block;" />
+
+        <!-- About text -->
+        <p>Я — Агата, Колдунья, Маг, Гадалка, Эзотерик и Ясновидящая с древнейшими корнями, передающимися по женской линии более 200 лет. Моя прабабушка объездила весь Кавказ, помогая семьям обрести мир, моя бабушка обучала царские дворы, а моя мать посвятила жизнь исцелению и защите самых влиятельных людей. Сегодня я продолжаю их дело и расширяю границы возможного.</p>
+        <p>Я лауреат международных магических конгрессов, награждена серебряным руническим амулетом от Ассоциации эзотериков Европы и получила медаль «За достижения в прикладных магических практиках» от Союза колдунов СНГ. Мои ритуалы упоминаются в профессиональных журналах энергетиков и мистиков.</p>
+        <p>Мои способности подтверждены тысячами историй успеха: от спасения любовных отношений до восстановления здоровья и финансового благополучия. Я не просто произношу слова — я вкладываю энергию и силу стихий в каждый обряд.</p>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+    <!-- ⚫ КРАСНАЯ / ЧЁРНАЯ / БЕЛАЯ МАГИЯ -->
+    <section>
+        <h2>Виды Магии</h2>
+        <p>Каждому случаю — свой подход. Я владею всеми направлениями магии и выбираю то, что подходит именно вам:</p>
+        <ul class="services-list">
+            <li><strong>⚫ Черная магия:</strong> кармические воздействия, мощные привязки, устранение врагов, порча, проклятия, защита от темных заклинаний. Применяю ритуалы ночного культа, работу с лунной энергией и древними демонами для достижения максимального эффекта.</li>
+            <li><strong>🔴 Красная магия:</strong> обряды на страсть, сексуальное влечение, возврат любимого, усиление чувств, любовь на всю жизнь. Использую огненные свечи, красные шелка, кровавые узлы и ритуал связывания сердец.</li>
+            <li><strong>⚪ Белая магия:</strong> защита и очищение, благословение, снятие негатива, привлечение света и гармонии. Провожу ритуалы с серебряными свечами, молитвами и ритуальным окроплением святой водой.</li>
+        </ul>
+        <p>Каждая магия работает в сочетании с натуральными ингредиентами: травы, кристаллы, масла и специальные рунические символы моей личной разработки.</p>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+    <!-- 👻 РАБОТА С ДУХАМИ -->
+    <section>
+        <h2>Работа с духами</h2>
+
+        <!-- ВИДЕО СРАЗУ ИГРАЕТ, ПОВТОРЯЕТСЯ, БЕЗ ИНТЕРФЕЙСА -->
+        <div style="margin: 20px 0;">
+            <iframe src="https://player.vimeo.com/video/1101248771?background=1&autoplay=1&loop=1&muted=1"
+                    style="width: 100%; height: 480px; border: none;"
+                    frameborder="0" allow="autoplay; fullscreen;" allowfullscreen>
+            </iframe>
+        </div>
+
+        <p>Я контактирую с духами рода, ангелами хранителями, элементалями стихий и древними сущностями. Через сложнейшие обряды я призываю их для вашей защиты, исцеления и мудрости.</p>
+        <ul class="services-list">
+            <li>👁 Призыв и закрепление духов‑хранителей для личной охраны.</li>
+            <li>🕯 Общение с умершими родственниками — передача посланий, поиск ответов.</li>
+            <li>🩸 Заключение союзов с древними силами для исполнения самых сложных желаний.</li>
+            <li>🔥 Проведение ритуалов в священных местах силы и на кладбищах для усиления действия.</li>
+            <li>🌬 Создание энергетических путей между мирами для быстрой передачи воли клиента.</li>
+        </ul>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+
+
+    <!-- 🕯 РИТУАЛЫ И УСЛУГИ -->
+    <section>
+        <h2>Ритуалы и Услуги</h2>
+        <ul class="services-list">
+            <li>❤️ <strong>Любовная магия:</strong> возвращение возлюбленных, ритуалы на верность, освобождение от любовных оков.</li>
+            <li>💰 <strong>Ритуалы на деньги и успех:</strong> привлечение богатства, открытие каналов изобилия, бизнес-обряды для процветания.</li>
+            <li>🛡 <strong>Защитные обряды:</strong> создание амулетов, установка оберегов, очищение жилища.</li>
+            <li>⚕️ <strong>Исцеление:</strong> восстановление здоровья, избавление от болезней, снятие порчи и сглаза тибетскими техниками.</li>
+            <li>🔮 <strong>Гадания:</strong> таро, руны, кофейная гуща, восковые капли, книга судеб — для полного анализа жизни.</li>
+            <li>🔍 <strong>Раскрытие мистических тайн:</strong> анализ прошлых жизней, выявление кармических узлов и их трансформация.</li>
+        </ul>
+        <p>После каждого ритуала вы получите подробные инструкции: как поддерживать энергию, какие шаги предпринять и какие талисманы носить.</p>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+    <!-- 🔮 ПРЕДСКАЗАНИЯ И ГАДАНИЯ -->
+    <section>
+        <h2>Предсказания и Гадания</h2>
+        <ul class="methods-list">
+            <li>🃏 <strong>Расклад Таро:</strong> классические и авторские расклады «Дорога Судьбы», «Пентаграмма Успеха», «Гармония Сердец».</li>
+            <li>🔥 <strong>Гадание на рунах:</strong> система «Рунический Орден» для прогноза на год вперёд.</li>
+            <li>☕ <strong>Гадание на кофейной гуще:</strong> экспресс-метод «Чёрный Кофе» для экстренных вопросов.</li>
+            <li>📜 <strong>Гадание на воске:</strong> ритуал «Обряд Отражения» для глубокого понимания ситуации.</li>
+            <li>🪐 <strong>Астрологический прогноз:</strong> личный гороскоп с рекомендациями по датам важных событий.</li>
+            <li>🔭 <strong>Гадание по сновидениям:</strong> анализ ночных видений и посланий подсознания.</li>
+        </ul>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+    <!-- 🔒 ГАРАНТИЯ И КОНФИДЕНЦИАЛЬНОСТЬ -->
+    <section>
+        <h2>Гарантирую полную конфиденциальность</h2>
+        <p>Всё, что сказано вами и увидено мной, хранится за магическими печатями и клятвами – никто не узнает ваших тайн.</p>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+    <!-- 💬 ОТЗЫВЫ КЛИЕНТОВ -->
+    <section>
+        <h2>Отзывы</h2>
+        <p>«Агата вернула мою семью из разрухи и обид.» — Ольга</p>
+        <p>«После ритуала на деньги я получила контракт на миллион рублей.» — Андрей</p>
+        <p>«Исцеление духами помогло моей дочери преодолеть болезнь.» — Виктория</p>
+        <p>«Раскрытие кармы направило меня на путь призвания.» — Михаил</p>
+        <p>«Сотрудничество с Агатой — это путь развития души и силы.» — Екатерина</p>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+    <!-- ГАДАНИЕ НА ТАРО -->
+    <section id="tarot">
+        <h2>Случайное Гадание</h2>
+        <button class="cta-button" id="tarotBtn">Вытянуть 3 карты</button>
+        <div id="tarot-result"></div>
+    </section>
+
+    <!-- КАЛЕНДАРЬ РИТУАЛОВ -->
+    <section id="calendar">
+        <h2>Календарь Ритуалов</h2>
+        <div id="ritual-calendar"></div>
+        <a href="https://wa.me/77477792649" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Связаться</button>
+        </a>
+    </section>
+
+    <section id="faq">
+        <h2>Часто Задаваемые Вопросы</h2>
+        <div class="faq-item"><div class="faq-question">Как проходит консультация и ритуал?</div><div class="faq-answer">Консультация онлайн или лично. После беседы я подбираю обряд, высылаю список атрибутов и дату проведения. Ритуал сопровождается моим энергетическим сопровождением.</div></div>
+        <div class="faq-item"><div class="faq-question">Сколько длится эффект ритуала?</div><div class="faq-answer">Эффект сохраняется от 3 месяцев до нескольких лет, в зависимости от вашей поддержки энергий.</div></div>
+        <div class="faq-item"><div class="faq-question">Нужно ли что-то для ритуала заранее?</div><div class="faq-answer">Да, вы получите список элементов (свечи, травы, амулеты) и инструкции по подготовке.</div></div>
+        <a href="#contact"><button class="cta-button">Связаться</button></a>
+    </section>
+
+    <h2>Контакты</h2>
+    <p>📱 +7 747 779‑26‑49 | +7 771 494‑37‑35</p>
+    </section>
+
+    <button id="topBtn">↑</button>
+
+    <div class="whatsapp-button" id="whatsappBtn"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></div>
+    <!-- Кнопка Instagram -->
+    <div class="instagram-button" id="instaBtn">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+    </div>
+
+    <div class="whatsapp-popup" id="whatsappPopup">
+        <h3>Выберите номер</h3>
+        <button onclick="openWhatsApp('+77477792649')">+7 747 779 26 49</button>
+        <button onclick="openWhatsApp('+77714943735')">+7 771 494 37 35</button>
+        <span class="close-btn" onclick="document.getElementById('whatsappPopup').style.display='none'">×</span>
+    </div>
+
+    <footer>© 2025 Ясновидящая Агата.</footer>
+
+    <script>
+        document.getElementById('whatsappBtn').addEventListener('click', function () {
+            const popup = document.getElementById('whatsappPopup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        });
+
+        function openWhatsApp(number) {
+            window.open(`https://wa.me/${number}`, '_blank');
+        }
+
+        document.getElementById('instaBtn').addEventListener('click', () => {
+            const user = 'gadanie_almaty_agata';
+            const appLink = `instagram://user?username=${user}`;
+            const webLink = `https://www.instagram.com/${user}`;
+
+            // если мобильное устройство
+            if (/android|iphone|ipad|ipod/i.test(navigator.userAgent)) {
+                // попытка открыть приложение
+                window.location = appLink;
+                // через 500мс, если не открылось, перекидываем на веб
+                setTimeout(() => {
+                    window.open(webLink, '_blank');
+                }, 500);
+            } else {
+                // на десктопе открываем сразу веб-версию
+                window.open(webLink, '_blank');
+            }
+        });
+
+        const phoneInput = document.getElementById('phone');
+
+        phoneInput.addEventListener('keydown', function (event) {
+            // Блокируем удаление +7
+            if ((this.selectionStart <= 2) &&
+                (event.key === 'Backspace' || event.key === 'Delete')) {
+                event.preventDefault();
+            }
+        });
+
+        phoneInput.addEventListener('input', function () {
+            if (!this.value.startsWith('+7')) {
+                this.value = '+7';
+            }
+            // Удаляем все символы кроме цифр, оставляя +7
+            this.value = '+7' + this.value.replace(/\D/g, '').substring(1, 11);
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(q => q.addEventListener('click', () => { const a = q.nextElementSibling; a.style.display = a.style.display === 'block' ? 'none' : 'block'; }));
+        // Tarot draw 3 unique cards
+        const cards = ['Шут', 'Маг', 'Жрица', 'Императрица', 'Император', 'Иерофант', 'Влюбленные', 'Колесница', 'Сила', 'Отшельник', 'Колесо Фортуны', 'Справедливость', 'Повешенный', 'Смерть', 'Умеренность', 'Дьявол', 'Башня', 'Звезда', 'Луна', 'Солнце', 'Суд', 'Мир'];
+        document.getElementById('tarotBtn').onclick = () => {
+            let copy = [...cards], chosen = [];
+            for (let i = 0; i < 3; i++) { const idx = Math.floor(Math.random() * copy.length); chosen.push(copy.splice(idx, 1)[0]); }
+            document.getElementById('tarot-result').innerHTML = 'Ваш расклад: <strong>' + chosen.join(' | ') + '</strong>';
+        };
+        // Ritual calendar
+        const days = ['Белая магия', 'Красная магия', 'Черная магия', 'Белая магия', 'Красная магия', 'Черная магия', 'Белая магия'];
+        document.getElementById('ritual-calendar').textContent = 'Сегодня: ' + days[new Date().getDay()];
+        // Back to top
+        const topBtn = document.getElementById('topBtn'); window.onscroll = () => { topBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none'; };
+        topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>
